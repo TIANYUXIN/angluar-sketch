@@ -1,0 +1,146 @@
+body,ul,li{
+	margin:0;
+	padding:0;
+	/*cursor:default; */
+	cursor:pointer;
+	list-style: none; 
+}
+body{
+	background:url(../img/elvent.jpg) no-repeat;
+	background-size:100% 100%; 
+}
+#bigbox{
+	width:1000px;
+	height:640px;
+	position: relative;
+	margin:0 auto;
+	border:1px solid white;
+}
+#controls{
+	height:50px;
+	position: absolute;
+	left:0;
+	top:0;
+	right:0;
+	/*background:#da0082;*/
+	background:linear-gradient(0deg,rgb(0,0,0),#333);
+}
+#controls{
+	font-size:18px;
+	color:white; 
+}
+.active{
+	color:#5d0098;
+	font-weight:bold; 
+}
+#drawregion{
+	position: absolute;
+	left:150px;
+	top:50px;
+	bottom:0;
+	right:150px;;
+	background:#eee;
+}
+#canvas{
+	position: absolute;
+	top:50%;
+	left:50%;
+	/*border:3px solid #666;*/
+	box-shadow:0 0 3px black; 
+	margin-left:-350px;
+	margin-top:-290px;
+}
+
+#controls ul{
+	width:1000px;
+	margin:0 auto;
+}
+#controls ul li{
+	float:left;
+	margin-left:9%;
+	margin-top:10px; 
+	width:60px;
+	height:24px;
+	text-align: center;
+	background:url(../img/7.jpg) no-repeat -20px -5px;
+	background-size:100px 30px;   
+}
+.yanse{
+	width:150px;
+	position:absolute;
+	right:0;
+	top:50px;
+	bottom:0;
+	background:#333; 
+	font-size:18px;
+	color:white;
+}
+.yanse div{
+	text-align:center; 
+	margin-left:45px;
+	background:url(../img/7.jpg) no-repeat 0px 0px;
+	width:60px;
+	height:30px;
+	background-size:60px 30px; 
+	margin-top:30px; 
+	line-height:30px;
+}
+.yanse input{
+	margin-left:43px;
+	width:60px;
+	height:30px;
+	margin-top:30px; 
+	line-height:30px;
+}
+.yanse p{
+	text-align:center;
+	margin-left:30px;
+	width:90px;
+	height:30px;
+	margin-top:30px; 
+	line-height:30px;
+}
+.file{
+	width:150px;
+	position: absolute;
+	left:0;
+	top:50px;
+	bottom:0;
+	background:#333;
+	font-size:18px;
+	color:white;
+}
+.file div{
+    text-align:center; 
+	margin-left:45px;
+	background:url(../img/7.jpg) no-repeat 0px 0px;
+	width:60px;
+	height:30px;
+	background-size:60px 30px; 
+	margin-top:30px; 
+	line-height:30px; 
+}
+.file a{
+	display: inline-block;
+	text-align:center; 
+	margin-left:45px;
+	background:url(../img/7.jpg) no-repeat 0px 0px;
+	width:60px;
+	height:30px;
+	background-size:60px 30px;
+	margin-top:30px;
+	line-height:30px;
+	color:white;
+	text-decoration:none;
+}
+.file p{
+	font-size:18px; 
+}
+.bottom{
+	width:700px;
+	position: absolute;
+	height:40px;
+    bottom:0;
+    left:150px;
+    background:#333;
+}

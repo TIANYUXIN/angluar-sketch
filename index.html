@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sketch">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-sketch</title>
+	<script src="js/angular.js"></script>
+	<script src="js/index.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="sketchController">
+<div id="bigbox">
+	<div id="controls">
+	    <ul>
+	    	<li ng-repeat="(key, value) in tools" ng-click="settool(value)" ng-class="{active:value==tool}">{{key}}</li>
+	    </ul>
+	    <br>
+	    
+	</div>
+	<div class="yanse">
+	    <div ng-class="{active:csState.style=='fill'}" ng-click="setStyle('fill')">填充</div>
+	    <input type="color" ng-model="csState.fillStyle">
+
+	    <div ng-class="{active:csState.style=='stroke'}" ng-click="setStyle('stroke')">画线</div>
+	    <input type="color" ng-model="csState.strokeStyle">
+	    <p>线宽度</p>
+	    <input type="range" min="1" max="30" step="1"  ng-model="csState.lineWidth">
+    </div>
+	    
+    <div class="file">
+	    <div ng-click="newSketch()">新建</div>
+	    <a ng-click="save($event)">保存</a>
+	    <div>回退</div>
+        <!-- <p>面板大小调节</p>
+		<input ng-model="canvasWH.width" type="range" min="400" max="700" step="1">
+		<input ng-model="canvasWH.height" type="range" min="400" max="540" step="1"> -->
+	</div>
+	<div id="drawregion">
+		<canvas id="canvas" width="{{canvasWH.width}}" height="{{canvasWH.height}}"></canvas>
+	</div>
+	<div class="bottom">
+		
+	</div>
+</div>	
+</body>
+</html>
